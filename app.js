@@ -26,7 +26,10 @@ const chuckNorris = async function (input) {
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
+  if (!input.value) return;
+
   await chuckNorris(input.value);
+  input.value = "";
 });
 
 document.querySelectorAll(".category").forEach((el) =>
@@ -60,6 +63,7 @@ document.querySelectorAll(".category").forEach((el) =>
     }
   })
 );
+
 window.addEventListener("scroll", function () {
   const nav = document.querySelector("nav");
 
@@ -70,10 +74,15 @@ window.addEventListener("scroll", function () {
     buttons.classList.remove("fixed");
   }
 });
+let ranNum;
 const getRandomJoke = async function () {
+  ranNum = Math.random() * 1;
+  randomJoke.innerHTML = `<img class="rotate" src="image.png" />`;
   const ranRes = await fetch("https://api.chucknorris.io/jokes/random");
   const ranData = await ranRes.json();
-  randomJoke.textContent = ranData.value;
+  setTimeout(async () => {
+    randomJoke.textContent = ranData.value;
+  }, ranNum * 1000);
 };
 getRandomJoke();
 
@@ -81,11 +90,10 @@ const getSpinner = function () {
   newRan.innerHTML = `<img class="rotate" src="reload.png" />`;
 };
 
-newRan.addEventListener("click", function () {
+newRan.addEventListener("click", async function () {
   getSpinner();
-
-  setTimeout(async () => {
-    await getRandomJoke();
+  await getRandomJoke();
+  setTimeout(() => {
     newRan.innerHTML = "NEW";
-  }, Math.random() * 1000);
+  }, ranNum * 1000);
 });

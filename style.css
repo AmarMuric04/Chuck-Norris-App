@@ -25,6 +25,7 @@ nav {
   left: 0px;
   right: 0px;
   top: 0px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,9 +72,11 @@ nav {
   height: 5rem;
   border: none;
   cursor: pointer;
-  border-left: 0.5px solid black;
-  border-right: 0.5px solid black;
+  border-left: 0.5px solid #222;
   background-color: white;
+}
+.category:first-child {
+  border: none;
 }
 .button-container button:hover {
   background-color: #222;
@@ -127,14 +130,16 @@ form button:hover {
 
 .main {
   width: 150rem;
-  margin-top: 20rem;
+  margin-top: 16rem;
   background-color: white;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
   color: black;
   padding-top: 5rem;
+  min-height: 76rem;
+  gap: 35rem;
 }
 
 .logo-main {
@@ -168,7 +173,6 @@ form button:hover {
   padding: 2rem;
   margin: 0.5rem;
   border-radius: 0.5rem;
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
 }
 .title {
   position: absolute;
@@ -231,4 +235,10 @@ form button:hover {
   100% {
     transform: rotate(360deg);
   }
+}
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
