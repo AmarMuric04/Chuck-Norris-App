@@ -6,16 +6,13 @@ const randomJoke = document.querySelector(".random-joke");
 const newRan = document.querySelector(".new-random");
 
 const chuckNorris = async function (input) {
-  console.log(input);
   const response = await fetch(
     `https://api.chucknorris.io/jokes/search?query=${input}`
   );
   const data = await response.json();
 
-  console.log(data);
-  document.querySelector(
-    ".joke-container"
-  ).innerHTML = `   <span class="random-joke-container"
+  document.querySelector(".joke-container").innerHTML = `  
+   <span class="random-joke-container"
         ><img src="screw.png" /><span class="random-joke">${input}</span
         ><img src="screw.png"
       /></span>`;
@@ -36,7 +33,9 @@ document.querySelectorAll(".category").forEach((el) =>
   el.addEventListener("click", async function () {
     document.querySelector(
       ".joke-container"
-    ).innerHTML = `    <span class="random-joke-container">
+    ).innerHTML = `    <span class="random-joke-container" id="${
+      el.textContent
+    }">
       <img src="screw.png" />
       <span class="random-joke">
         ${el.textContent[0].toUpperCase() + el.textContent.slice(1)}
