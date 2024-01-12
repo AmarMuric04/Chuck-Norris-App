@@ -10,4 +10,11 @@ const ranJoke = async function () {
 
 ranJoke();
 
-generateBtn.addEventListener("click", ranJoke);
+generateBtn.addEventListener("click", function () {
+  generateBtn.innerHTML = `<img src="load.png" class="load-icon" />`;
+
+  setTimeout(() => {
+    ranJoke();
+    generateBtn.innerHTML = "GENERATE NEW";
+  }, 500);
+});
