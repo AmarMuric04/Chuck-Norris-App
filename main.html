@@ -50,7 +50,7 @@
           </div>
         </div>
       </div>
-      <img class="main-photo" src="../norris.jpg" alt="" />
+      <img class="main-photo" src="norris.jpg" alt="" />
     </div>
     <div class="second-page" id="random">
       <h1>Random fact</h1>
@@ -90,16 +90,9 @@
       </div>
     </div>
     <div class="fourth-page" id="facts">
-      <h1>FACTS</h1>
-      <div class="submit-container">
-        <form class="form">
-          <input
-            class="input"
-            type="text"
-            placeholder="Type in a word..."
-          /><button><i class="fa-solid fa-magnifying-glass"></i> Search</button>
-        </form>
-        <div class="category-container">
+      <div class="category-button">
+        Categories
+        <div class="category-container hidden">
           <button class="category"><p>Animal</p></button>
           <button class="category"><p>Career</p></button>
           <button class="category"><p>Celebrity</p></button>
@@ -118,44 +111,52 @@
           <button class="category"><p>Travel</p></button>
         </div>
       </div>
+
+      <h1>FACTS</h1>
+      <div class="submit-container">
+        <form class="form">
+          <input
+            class="input"
+            type="text"
+            placeholder="Type in a word..."
+          /><button><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+        </form>
+      </div>
       <div class="joke-container">
-        <!-- <p class="information">
+        <p class="information">
           Click on a category or search up a word to get a fact.
         </p>
-        <div class="show-joke">
+        <!-- <div class="show-joke">
+          <p class="information">
+            Click on a category or search up a word to get a fact.
+          </p>
           <p class="joke"></p>
           <p class="category-show"></p>
         </div> -->
-        <!-- 
-        <div class="card-container">
+
+        <!-- <div class="card-container">
           <p class="information">
             Click on a category or search up a word to get a fact.
           </p>
           <div class="card">
-            <p>
-          
-            </p>
+            <p></p>
           </div>
           <div class="card">
-            <p>
-           
-            </p>
+            <p></p>
           </div>
           <div class="card">
-            <p>
-            
-            </p>
+            <p></p>
           </div>
           <div class="card">
-            <p>
-            
-            </p>
+            <p></p>
           </div>
           <div class="card">
-            <p>
-            
-            </p>
+            <p></p>
           </div>
+        </div> -->
+        <!-- <div class="pagination">
+          <button class="go-right" data-page="3">Next</button>
+          <button class="go-left" data-page="1">Prev</button>
         </div> -->
       </div>
     </div>
