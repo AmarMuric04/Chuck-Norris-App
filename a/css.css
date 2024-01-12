@@ -71,6 +71,11 @@ body {
   height: 40rem;
   font-size: 2rem;
 }
+.info a {
+  color: black;
+  text-decoration: none;
+}
+
 .info h1 {
   font-family: "Anton";
   font-size: 7rem;
@@ -119,11 +124,17 @@ body {
   gap: 0.5rem;
   transition: all 0.5s;
 }
+.info a {
+  transition: all 0.5s;
+}
 
 .info button:hover {
   background-image: url(./designdark.png);
-  color: white;
   border: 2px solid var(--color-1);
+  color: white;
+  & a {
+    color: white;
+  }
 }
 
 .buttons {
@@ -188,7 +199,7 @@ nav {
   transition: all 0.5s;
 }
 
-a {
+.nav-buttons li a {
   text-decoration: none;
   color: black;
   transform: rotate(80deg);
@@ -295,7 +306,7 @@ a {
   position: relative;
   width: 192rem;
   height: 80rem;
-  background-color: orange;
+  background-color: var(--color-2);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -356,16 +367,13 @@ a {
 }
 
 .fourth-page {
-  padding: 5rem 0rem;
-  height: 76.9rem;
+  position: relative;
   width: 192rem;
+  height: 100vh;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  background-color: #222;
-  color: white;
-  letter-spacing: 0.2em;
+  justify-content: space-between;
 }
 
 .fourth-page h1 {
@@ -379,6 +387,247 @@ a {
 }
 .fourth-page h1:before {
   content: "";
+  background-color: #ff7d92;
+  height: 0.5rem;
+  width: 10rem;
+  top: 5rem;
+  position: absolute;
+  right: 3rem;
+}
+.fourth-page h1:after {
+  content: "";
+  background-color: rgb(255, 125, 146);
+  height: 0.5rem;
+  width: 10rem;
+  position: absolute;
+  bottom: 5rem;
+  left: 4rem;
+}
+.submit-container {
+  margin-top: -20rem;
+}
+.category-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 150rem;
+  transform: skew(-45deg);
+}
+.category-container button {
+  height: 4rem;
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid #222;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.category-container button:hover {
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+}
+.category-container p {
+  transform: skew(45deg);
+}
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+form input {
+  position: relative;
+  height: 1rem;
+  font-size: 1.5rem;
+  padding: 2rem;
+  border: 1px solid black;
+  border-right: none;
+}
+form input:focus {
+  outline: none;
+}
+form button {
+  position: relative;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  gap: 0.5rem;
+  height: 5.2rem;
+  padding: 2rem;
+  background-color: var(--color-2);
+  border: 1px solid black;
+  border-left: none;
+  cursor: pointer;
+}
+
+form button::after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  width: 3rem;
+  height: 3rem;
+  top: -1.6rem;
+  right: -1.55rem;
+  border-bottom: 1px solid black;
+  transform: rotate(45deg);
+}
+.joke-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10rem;
+}
+.information {
+  font-size: 2rem;
+  position: absolute;
+  top: -3rem;
+}
+.show-joke {
+  background-color: var(--color-2);
+  height: 30rem;
+  width: 120rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.joke {
+  position: relative;
+  background-color: white;
+  height: 21rem;
+  width: 105rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2.5rem;
+  padding: 2rem;
+}
+.card {
+  position: relative;
+  height: 20rem;
+  background-color: var(--color-2);
+  border: 1px solid var(--color-2);
+  width: 50rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-size: 2rem;
+  padding: 2rem;
+}
+.card p {
+  z-index: 2000;
+  text-align: center;
+}
+.card:after {
+  content: "";
+  height: 40rem;
+  width: 10rem;
+  background-color: white;
+  position: absolute;
+  top: 0px;
+  right: 5rem;
+  transform: rotate(45deg);
+}
+.card:before {
+  content: "";
+  height: 45rem;
+  width: 1rem;
+  background-color: white;
+  position: absolute;
+  top: -10rem;
+  right: 11rem;
+  transform: rotate(45deg);
+}
+.card-container {
+  position: relative;
+  height: 40rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: -20rem;
+  margin-bottom: 5rem;
+}
+
+.joke:after {
+  content: "";
+  position: absolute;
+  background-color: var(--color-2);
+  width: 5rem;
+  height: 5rem;
+  top: -2.5rem;
+  left: -4rem;
+  transform: rotate(45deg);
+}
+
+.joke:before {
+  content: "";
+  position: absolute;
+  background-color: var(--color-2);
+  width: 5rem;
+  height: 5rem;
+  bottom: -2.5rem;
+  right: -3rem;
+  transform: rotate(45deg);
+}
+
+.show-joke:after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  width: 10rem;
+  height: 10rem;
+  top: -5rem;
+  left: -6rem;
+  transform: rotate(45deg);
+  z-index: 1000;
+}
+
+.show-joke:before {
+  content: "";
+  position: absolute;
+  background-color: white;
+  width: 10rem;
+  height: 10rem;
+  bottom: -5rem;
+  right: -5rem;
+  transform: rotate(45deg);
+  z-index: 1000;
+}
+.category-show {
+  position: absolute;
+  bottom: 0.3rem;
+  font-size: 1.5rem;
+}
+
+.fifth-page {
+  padding: 5rem 0rem;
+  height: 76.9rem;
+  width: 192rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background-color: #222;
+  color: white;
+  letter-spacing: 0.2em;
+}
+
+.fifth-page h1 {
+  position: relative;
+  padding: 5rem 0rem;
+  font-family: "Anton";
+  font-size: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fifth-page h1:before {
+  content: "";
   background-color: var(--color-2);
   transform: rotate(90deg);
   height: 5rem;
@@ -386,7 +635,7 @@ a {
   position: absolute;
   right: -4rem;
 }
-.fourth-page h1:after {
+.fifth-page h1:after {
   content: "";
   background-color: var(--color-2);
   transform: rotate(90deg);
