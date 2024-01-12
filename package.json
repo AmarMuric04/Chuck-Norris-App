@@ -2,11 +2,14 @@
   "name": "chuck-norris-app",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "default": "",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html --dist-dir ./dist"
+    "start": "parcel main.html",
+    "build": "parcel build main.html --dist-dir ./dist"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "parcel": "^2.11.0"
+  }
 }
