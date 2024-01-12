@@ -1,5 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -7,12 +10,21 @@ html {
   padding: 0px;
 }
 
+:root {
+  --color-1: gray;
+  --color-2: orange;
+}
+
 body {
+  position: relative;
+  font-family: "Roboto";
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  overflow-x: hidden;
 }
 
 .main {
@@ -22,7 +34,7 @@ body {
   overflow: hidden;
 }
 
-.button-page {
+.info-container {
   position: relative;
   width: 100%;
   z-index: 1000;
@@ -34,24 +46,430 @@ body {
 
 .main-photo {
   height: 96.9rem;
-  width: 70rem;
+  width: 100rem;
   object-fit: cover;
 }
-.button-page:after {
+.info-container:after {
   content: "";
   z-index: 5;
   width: 50rem;
   height: 150%;
-  transform: rotate(10deg);
+  transform: rotate(30deg);
   position: absolute;
-  right: -5rem;
+  right: -20rem;
   background-color: white;
-  box-shadow: 200px 0px 100px -50px rgba(255, 255, 255, 1);
+  box-shadow: 100px -100px 100px 0px rgba(255, 255, 255, 1);
 }
 
 .info {
+  z-index: 10;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
+  width: 50rem;
+  height: 40rem;
+  font-size: 2rem;
+}
+.info h1 {
+  font-family: "Anton";
+  font-size: 7rem;
+  margin-top: -20rem;
+}
+
+.info h1 span {
+  font-size: 1.5rem;
+  font-family: "Roboto";
+  opacity: 0.5;
+}
+.bigger-text {
+  text-align: center;
+  font-size: 1.8rem;
+  color: var(--color-1);
+}
+
+.smaller-text {
+  background-color: var(--color-2);
+  color: white;
+  font-weight: bold;
+  padding: 2rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  width: 100%;
+  font-size: 2rem;
+  text-align: center;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0 1);
+}
+
+.info button {
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: transparent;
+  padding: 1rem 3rem;
+  height: 5rem;
+  width: 20rem;
+  border: 1px solid var(--color-1);
+  margin-top: 2rem;
+  cursor: pointer;
+  background-image: url(../design.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.5s;
+}
+
+.info button:hover {
+  background-image: url(./designdark.png);
+  color: white;
+  border: 2px solid var(--color-1);
+}
+
+.buttons {
+  display: flex;
+  gap: 5rem;
+}
+
+.second-page {
+  width: 192rem;
+  height: 50rem;
+  background-color: var(--color-2);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.second-page:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-45deg);
+  background-color: white;
+  right: -100rem;
+}
+
+.icon {
+  width: 2.5rem;
+}
+nav {
+  background-color: rgba(255, 255, 255, 1);
+  position: absolute;
+  top: 0px;
+  width: 192rem;
+  height: 2rem;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 0rem 2rem;
+  height: 5rem;
+  overflow: hidden;
+}
+.nav-buttons {
+  font-family: "Anton";
+  font-size: 2rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  height: 100%;
+}
+.nav-buttons li {
+  display: flex;
+  align-items: center;
+  padding: 0rem 2rem;
+  transform: rotate(-80deg);
+  height: 200%;
+  transition: all 0.5s;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  transform: rotate(80deg);
+}
+
+.nav-buttons li:hover {
+  cursor: pointer;
+  background-color: var(--color-2);
+}
+
+.second-page h1 {
+  font-family: "Anton";
+  font-size: 5rem;
+  color: white;
+}
+
+.second-page p {
+  position: relative;
+  font-size: 3rem;
+  padding: 2rem 5rem;
+  background-color: white;
+  width: 50%;
+  text-align: center;
+  min-height: 10rem;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.random-joke:after {
+  content: "";
+  position: absolute;
+  background-color: var(--color-2);
+  width: 10rem;
+  height: 10rem;
+  top: -5rem;
+  left: -5rem;
+  transform: rotate(45deg);
+}
+
+.random-joke:before {
+  content: "";
+  position: absolute;
+  background-color: var(--color-2);
+  width: 10rem;
+  height: 10rem;
+  bottom: -5rem;
+  right: -5rem;
+  transform: rotate(45deg);
+}
+
+.generate {
+  background-color: orange;
+  padding: 2rem 5rem;
+  border: 1px solid black;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.generate:focus {
+  outline: none;
+}
+.generate:hover {
+  background-color: black;
+  color: orange;
+}
+
+.image-page {
+  position: relative;
+  width: 192rem;
+  height: 50rem;
+  background-position: center;
+  background-size: cover;
+  background-image: url("wallpaper.png");
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.image-page:after {
+  content: "";
+  position: absolute;
+  background-color: var(--color-2);
+  width: 10rem;
+  height: 10rem;
+  top: -5rem;
+  left: -5rem;
+  transform: rotate(45deg);
+}
+
+.image-page:before {
+  content: "";
+  position: absolute;
+  background-color: var(--color-2);
+  width: 10rem;
+  height: 10rem;
+  bottom: -5rem;
+  right: -5rem;
+  transform: rotate(45deg);
+}
+
+.third-page {
+  position: relative;
+  width: 192rem;
+  height: 80rem;
+  background-color: orange;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  color: white;
+  letter-spacing: 0.2em;
+}
+.third-page h1 {
+  position: relative;
+  padding: 5rem 0rem;
+  font-family: "Anton";
+  font-size: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.third-page h1:before {
+  content: "";
+  background-color: cyan;
+  transform: rotate(30deg);
+  height: 5rem;
+  width: 0.5rem;
+  top: 2.1rem;
+  position: absolute;
+  right: 3rem;
+}
+.third-page h1:after {
+  content: "";
+  background-color: cyan;
+  transform: rotate(30deg);
+  height: 5rem;
+  width: 0.5rem;
+  position: absolute;
+  bottom: 1.5rem;
+  left: 4rem;
+}
+
+.third-page h2 {
+  font-size: 3rem;
+  margin: 2rem;
+}
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+}
+
+.about-text {
+  font-size: 1.5rem;
+  width: 30%;
+  letter-spacing: 0.1em;
+  text-align: center;
+  min-height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fourth-page {
+  padding: 5rem 0rem;
+  height: 76.9rem;
+  width: 192rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background-color: #222;
+  color: white;
+  letter-spacing: 0.2em;
+}
+
+.fourth-page h1 {
+  position: relative;
+  padding: 5rem 0rem;
+  font-family: "Anton";
+  font-size: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fourth-page h1:before {
+  content: "";
+  background-color: var(--color-2);
+  transform: rotate(90deg);
+  height: 5rem;
+  width: 0.5rem;
+  position: absolute;
+  right: -4rem;
+}
+.fourth-page h1:after {
+  content: "";
+  background-color: var(--color-2);
+  transform: rotate(90deg);
+  height: 5rem;
+  width: 0.5rem;
+  position: absolute;
+  left: -4rem;
+}
+
+.contact-types {
+  display: flex;
+  gap: 3rem;
+  font-size: 2rem;
+}
+.contact-types p {
+  text-decoration: dotted;
+  text-decoration: underline;
+  text-decoration-color: var(--color-2);
+}
+.text-area {
+  color: white;
+  font-size: 2rem;
+  padding: 2rem;
+  max-width: 73.2rem;
+  min-width: 73.2rem;
+  overflow: hidden;
+  max-height: 30rem;
+  min-height: 30rem;
+  border: 1px solid var(--color-2);
+  background-color: transparent;
+}
+.text-area:focus {
+  outline: none;
+}
+.contact-container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.text-container input {
+  color: white;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  width: 34.3rem;
+  background-color: transparent;
+  border: 1px solid var(--color-2);
+}
+.text-container input:focus {
+  outline: none;
+}
+.main-contact-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.submit {
+  padding: 2rem 5rem;
+  background-color: orange;
+  border: none;
+  cursor: pointer;
+}
+
+footer {
+  height: 6rem;
+  font-size: 1.5rem;
+  background-color: var(--color-2);
+  width: 192rem;
+  display: flex;
+  align-items: center;
+  color: white;
+  flex-direction: column-reverse;
+  padding: 2rem 0rem;
+  justify-content: space-between;
+}
+
+footer i {
+  font-size: 3rem;
+  cursor: pointer;
+  transition: all 0.5s;
+  margin-right: 2rem;
+}
+footer i:hover {
+  color: black;
 }
