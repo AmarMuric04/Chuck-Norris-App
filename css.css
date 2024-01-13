@@ -3,6 +3,7 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  font-family: "Roboto";
 }
 
 .error-message {
@@ -12,7 +13,7 @@ html {
   gap: 2rem;
 }
 .error-message i {
-  color: orange;
+  color: var(--main-color);
   font-size: 5rem;
 }
 
@@ -22,65 +23,67 @@ html {
 }
 
 :root {
-  --color-1: gray;
-  --color-2: orange;
+  --secondary-color: gray;
+  --main-color: orange;
 }
 
-body {
+#site {
   position: relative;
-  font-family: "Roboto";
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
   overflow-x: hidden;
 }
 
 .main {
-  width: 192rem;
+  width: 100%;
+  height: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
 }
 
 .info-container {
   position: relative;
-  width: 100%;
+  width: 50%;
   z-index: 1000;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   background-color: white;
+  display: flex;
 }
 
 .main-photo {
   height: 96.9rem;
-  width: 100rem;
+  width: 50%;
   object-fit: cover;
 }
 .info-container:after {
   content: "";
   z-index: 5;
-  width: 50rem;
-  height: 150%;
-  transform: rotate(30deg);
+  width: 100%;
+  height: 300%;
+  transform: rotate(20deg);
+  right: -5rem;
+  top: -40rem;
   position: absolute;
-  right: -20rem;
   background-color: white;
-  box-shadow: 100px -100px 100px 0px rgba(255, 255, 255, 1);
+  box-shadow: 100px -100px 50px 0px rgba(255, 255, 255, 1);
 }
 
 .info {
   z-index: 10;
+  width: 50%;
+  height: 100%;
+  font-size: 2rem;
+  gap: 2rem;
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
-  width: 50rem;
-  height: 40rem;
-  font-size: 2rem;
+  justify-content: center;
 }
 .info a {
   color: black;
@@ -89,31 +92,29 @@ body {
 
 .info h1 {
   font-family: "Anton";
-  font-size: 7rem;
-  margin-top: -20rem;
+  font-size: 6rem;
 }
 
 .info h1 span {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-family: "Roboto";
   opacity: 0.5;
 }
 .bigger-text {
   text-align: center;
   font-size: 1.8rem;
-  color: var(--color-1);
+  color: var(--secondary-color);
 }
 
 .smaller-text {
-  background-color: var(--color-2);
+  background-color: var(--main-color);
   color: white;
   font-weight: bold;
   padding: 2rem;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
   width: 100%;
   font-size: 2rem;
   text-align: center;
+
   text-shadow: 5px 5px 10px rgba(0, 0, 0 1);
 }
 
@@ -124,7 +125,7 @@ body {
   padding: 1rem 3rem;
   height: 5rem;
   width: 20rem;
-  border: 1px solid var(--color-1);
+  border: 1px solid var(--secondary-color);
   margin-top: 2rem;
   cursor: pointer;
   background-image: url(./design.jpg);
@@ -141,7 +142,7 @@ body {
 
 .info button:hover {
   background-image: url(./designdark.png);
-  border: 2px solid var(--color-1);
+  border: 2px solid var(--secondary-color);
   color: white;
   & a {
     color: white;
@@ -154,9 +155,9 @@ body {
 }
 
 .second-page {
-  width: 192rem;
+  width: 100%;
   height: 50rem;
-  background-color: var(--color-2);
+  background-color: var(--main-color);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -182,13 +183,13 @@ nav {
   background-color: rgba(255, 255, 255, 1);
   position: absolute;
   top: 0px;
-  width: 192rem;
+  width: 100%;
   height: 2rem;
   z-index: 2000;
   display: flex;
   align-items: center;
   justify-content: end;
-  padding: 0rem 2rem;
+
   height: 5rem;
   overflow: hidden;
 }
@@ -218,13 +219,14 @@ nav {
 
 .nav-buttons li:hover {
   cursor: pointer;
-  background-color: var(--color-2);
+  background-color: var(--main-color);
 }
 
 .second-page h1 {
   font-family: "Anton";
   font-size: 5rem;
   color: white;
+  z-index: 2000;
 }
 
 .second-page p {
@@ -244,7 +246,7 @@ nav {
 .random-joke:after {
   content: "";
   position: absolute;
-  background-color: var(--color-2);
+  background-color: var(--main-color);
   width: 10rem;
   height: 10rem;
   top: -5rem;
@@ -255,7 +257,7 @@ nav {
 .random-joke:before {
   content: "";
   position: absolute;
-  background-color: var(--color-2);
+  background-color: var(--main-color);
   width: 10rem;
   height: 10rem;
   bottom: -5rem;
@@ -271,6 +273,7 @@ nav {
   border: 1px solid black;
   cursor: pointer;
   transition: all 0.2s;
+  z-index: 2000;
 }
 .generate:focus {
   outline: none;
@@ -282,7 +285,7 @@ nav {
 
 .image-page {
   position: relative;
-  width: 192rem;
+  width: 100%;
   height: 50rem;
   background-position: center;
   background-size: cover;
@@ -294,7 +297,7 @@ nav {
 .image-page:after {
   content: "";
   position: absolute;
-  background-color: var(--color-2);
+  background-color: var(--main-color);
   width: 10rem;
   height: 10rem;
   top: -5rem;
@@ -305,7 +308,7 @@ nav {
 .image-page:before {
   content: "";
   position: absolute;
-  background-color: var(--color-2);
+  background-color: var(--main-color);
   width: 10rem;
   height: 10rem;
   bottom: -5rem;
@@ -315,9 +318,9 @@ nav {
 
 .third-page {
   position: relative;
-  width: 192rem;
+  width: 100%;
   height: 80rem;
-  background-color: var(--color-2);
+  background-color: var(--main-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -368,7 +371,7 @@ nav {
 
 .about-text {
   font-size: 1.5rem;
-  width: 30%;
+  width: 40%;
   letter-spacing: 0.1em;
   text-align: center;
   min-height: 10rem;
@@ -400,12 +403,13 @@ nav {
 
 .fourth-page {
   position: relative;
-  width: 192rem;
+  width: 100%;
   height: 100rem;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
+  padding-bottom: 7%;
 }
 
 .fourth-page h1 {
@@ -450,8 +454,8 @@ nav {
 }
 .pagination {
   position: absolute;
-  bottom: 3rem;
   width: 192rem;
+  bottom: -7%;
   height: 3rem;
   display: flex;
   align-items: center;
@@ -460,7 +464,7 @@ nav {
   border: none;
   width: 10rem;
   height: 3rem;
-  background-color: var(--color-2);
+  background-color: var(--main-color);
   color: white;
   cursor: pointer;
   transition: all 0.2s;
@@ -471,16 +475,16 @@ nav {
 }
 .go-left {
   position: absolute;
-  left: 20rem;
+  left: 40rem;
 }
 .go-right {
   position: absolute;
-  right: 20rem;
+  right: 40rem;
 }
 .category-button {
   font-family: "Anton";
   position: absolute;
-  border: 3px solid var(--color-2);
+  border: 3px solid var(--main-color);
   width: 20rem;
   height: 7rem;
   right: 5rem;
@@ -495,7 +499,7 @@ nav {
   background-color: rgba(255, 165, 0, 0.2);
 }
 .category:first-child {
-  border-top: 1px solid var(--color-2);
+  border-top: 1px solid var(--main-color);
 }
 .category-container {
   position: absolute;
@@ -534,8 +538,8 @@ form {
 form input {
   position: relative;
   height: 1rem;
-  font-size: 1.5rem;
   padding: 2rem;
+  font-size: 1.5rem;
   border: 1px solid black;
   border-right: none;
 }
@@ -550,7 +554,7 @@ form button {
   gap: 0.5rem;
   height: 5.2rem;
   padding: 2rem;
-  background-color: var(--color-2);
+  background-color: var(--main-color);
   border: 1px solid black;
   border-left: none;
   cursor: pointer;
@@ -585,9 +589,9 @@ form button::after {
 }
 .show-joke {
   position: relative;
-  background-color: var(--color-2);
+  background-color: var(--main-color);
   height: 30rem;
-  width: 120rem;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -596,19 +600,18 @@ form button::after {
   position: relative;
   background-color: white;
   height: 21rem;
-  width: 105rem;
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   font-size: 2.5rem;
-  padding: 2rem;
 }
 .card {
   position: relative;
   height: 20rem;
-  background-color: var(--color-2);
-  border: 1px solid var(--color-2);
+  background-color: var(--main-color);
+  border: 1px solid var(--main-color);
   width: 50rem;
   overflow: hidden;
   display: flex;
@@ -617,6 +620,7 @@ form button::after {
   color: black;
   font-size: 2rem;
   padding: 2rem;
+  overflow: hidden;
 }
 .card p {
   z-index: 2000;
@@ -645,31 +649,32 @@ form button::after {
 }
 .card-container {
   position: relative;
-  height: 40rem;
+  height: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  width: 100%;
   gap: 1rem;
 }
 
 .joke:after {
   content: "";
   position: absolute;
-  background-color: var(--color-2);
+  background-color: var(--main-color);
   width: 5rem;
   height: 5rem;
-  top: -2.5rem;
-  left: -4rem;
+  top: -3rem;
+  left: -2.5rem;
   transform: rotate(45deg);
 }
 
 .joke:before {
   content: "";
   position: absolute;
-  background-color: var(--color-2);
+  background-color: var(--main-color);
   width: 5rem;
   height: 5rem;
-  bottom: -2.5rem;
+  bottom: -2.6rem;
   right: -3rem;
   transform: rotate(45deg);
 }
@@ -706,7 +711,7 @@ form button::after {
 .fifth-page {
   padding: 5rem 0rem;
   height: 80rem;
-  width: 192rem;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -727,7 +732,7 @@ form button::after {
 }
 .fifth-page h1:before {
   content: "";
-  background-color: var(--color-2);
+  background-color: var(--main-color);
   transform: rotate(90deg);
   height: 5rem;
   width: 0.5rem;
@@ -736,7 +741,7 @@ form button::after {
 }
 .fifth-page h1:after {
   content: "";
-  background-color: var(--color-2);
+  background-color: var(--main-color);
   transform: rotate(90deg);
   height: 5rem;
   width: 0.5rem;
@@ -750,20 +755,20 @@ form button::after {
   font-size: 2rem;
 }
 .contact-types p {
-  text-decoration: dotted;
   text-decoration: underline;
-  text-decoration-color: var(--color-2);
+  text-decoration-color: var(--main-color);
 }
 .text-area {
+  max-width: calc(100% - 4rem);
+  min-width: calc(100% - 4rem);
+  height: 20rem;
+  max-height: 20rem;
+  min-height: 20rem;
   color: white;
   font-size: 2rem;
   padding: 2rem;
-  max-width: 73.2rem;
-  min-width: 73.2rem;
   overflow: hidden;
-  max-height: 30rem;
-  min-height: 30rem;
-  border: 1px solid var(--color-2);
+  border: 1px solid var(--main-color);
   background-color: transparent;
 }
 .text-area:focus {
@@ -776,13 +781,19 @@ form button::after {
   align-items: center;
   flex-direction: column;
 }
+.text-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
 .text-container input {
   color: white;
   font-size: 2rem;
   padding: 1rem 2rem;
-  width: 34.3rem;
+  width: 45%;
   background-color: transparent;
-  border: 1px solid var(--color-2);
+  border: 1px solid var(--main-color);
 }
 .text-container input:focus {
   outline: none;
@@ -796,22 +807,22 @@ form button::after {
 }
 .submit {
   padding: 2rem 5rem;
-  background-color: var(--color-2);
+  background-color: var(--main-color);
   border: none;
   cursor: pointer;
   transition: all 0.2s;
-  border: 1px solid var(--color-2);
+  border: 1px solid var(--main-color);
 }
 .submit:hover {
   background-color: #222;
-  color: var(--color-2);
-  border: 1px solid var(--color-2);
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
 }
 footer {
   height: 6rem;
   font-size: 1.5rem;
-  background-color: var(--color-2);
-  width: 192rem;
+  background-color: var(--main-color);
+  width: 100%;
   display: flex;
   align-items: center;
   color: white;
@@ -845,4 +856,170 @@ footer i:hover {
 footer a {
   color: white;
   text-decoration: none;
+}
+@media screen and (max-width: 1536px) {
+  .main {
+    height: 100svh;
+  }
+  .main h1 {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .main {
+    height: 100svh;
+  }
+  .info h1 {
+    font-size: 5rem;
+  }
+  .card {
+    width: 25%;
+    height: 20rem;
+  }
+
+  .fifth-page {
+    height: 80svh;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .main {
+    height: 100svh;
+  }
+  .info-container::after {
+    display: none;
+  }
+
+  .info-container {
+    width: 80vw;
+  }
+  .info {
+    width: 100%;
+  }
+  .main h1 {
+    font-size: 5rem;
+  }
+  .main h1 span {
+    display: none;
+  }
+  .bigger-text,
+  .smaller-text {
+    font-size: 1.8rem;
+  }
+  .second-page,
+  .image-page {
+    height: 50svh;
+  }
+  .about-text {
+    width: 80vw;
+  }
+  .third-page h2 {
+    display: none;
+  }
+  .third-page h1::before {
+    height: 2rem;
+    top: 5rem;
+    right: 4.3rem;
+  }
+  .third-page h1::after {
+    height: 2rem;
+    left: 4.5rem;
+    bottom: -0.5rem;
+  }
+  .buttons {
+    display: none;
+  }
+  .main-photo {
+    display: none;
+  }
+  .third-page {
+    height: 100svh;
+  }
+  .about-container {
+    gap: 0.5rem;
+  }
+  .third-page h1 {
+    padding-bottom: 0px;
+  }
+  .fourth-page {
+    padding-bottom: 10rem;
+  }
+  .fourth-page h1 {
+    padding-top: 15rem;
+  }
+  .fourth-page h1:before {
+    top: 15rem;
+  }
+  .category-button {
+    left: 10rem;
+  }
+  .submit {
+    margin-top: 2rem;
+  }
+  .go-right {
+    right: 78rem;
+  }
+  .go-left {
+    left: 78rem;
+  }
+  nav {
+    display: none;
+  }
+  .card {
+    width: 80%;
+  }
+  .card-container {
+    height: auto;
+    margin: 1rem 0rem;
+  }
+  .fourth-page {
+    height: auto;
+  }
+  .info {
+    font-size: 0.5rem;
+  }
+  .contact-types {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  .contact-types p {
+    text-decoration: none;
+  }
+  .text-container {
+    flex-direction: column;
+  }
+  .text-container input {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .info h1 {
+    font-size: 4.5rem;
+  }
+  .about-text {
+    display: none;
+  }
+  .third-page {
+    height: 30svh;
+  }
+  .category-button {
+    left: 6rem;
+  }
+  .go-left {
+    left: 80rem;
+  }
+  .go-right {
+    right: 80rem;
+  }
+  .pages,
+  .page span {
+    font-size: 1.5rem;
+  }
+  .pages {
+    left: 92rem;
+  }
 }
