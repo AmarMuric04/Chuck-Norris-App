@@ -15,7 +15,7 @@ const ranJoke = async function () {
 ranJoke();
 
 generateBtn.addEventListener("click", function () {
-  generateBtn.innerHTML = `<img src="load.png" class="load-icon" />`;
+  generateBtn.innerHTML = `<i class="fa-solid fa-rotate-right load-icon" ></i>`;
 
   setTimeout(() => {
     ranJoke();
