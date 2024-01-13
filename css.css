@@ -542,6 +542,7 @@ form input {
   font-size: 1.5rem;
   border: 1px solid black;
   border-right: none;
+  z-index: 8000;
 }
 form input:focus {
   outline: none;
@@ -873,6 +874,9 @@ footer a {
   .info h1 {
     font-size: 5rem;
   }
+  .info h1 span {
+    display: none;
+  }
   .card {
     width: 25%;
     height: 20rem;
@@ -880,6 +884,93 @@ footer a {
 
   .fifth-page {
     height: 80svh;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .about-text {
+    width: 120%;
+  }
+  .about-text {
+    width: 50%;
+  }
+  .third-page h2 {
+    display: none;
+  }
+  .go-right {
+    right: 60rem;
+  }
+  .go-left {
+    left: 60rem;
+  }
+}
+@media screen and (max-width: 1080px) {
+  .main-photo {
+    display: none;
+  }
+  .smaller-text {
+    width: 153%;
+  }
+  .info h1 {
+    text-align: center;
+    width: 300%;
+  }
+}
+@media screen and (max-width: 850px) {
+  .bigger-text {
+    width: 150%;
+  }
+  .third-page {
+    height: 100svh;
+  }
+  .smaller-text {
+    width: 200%;
+  }
+  .contact-types {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-container {
+    gap: 1.5rem;
+  }
+
+  .contact-types p {
+    text-decoration: none;
+  }
+}
+@media screen and (max-width: 790px) {
+  .show-joke {
+    margin-top: 3rem;
+  }
+  .third-page {
+    height: 30svh;
+  }
+  .about-text {
+    display: none;
+  }
+  .fourth-page h1 {
+    padding-top: 15rem;
+  }
+  .fourth-page h1:before {
+    top: 15rem;
+  }
+  .category-button {
+    left: 35%;
+  }
+}
+@media screen and (max-width: 700px) {
+  nav {
+    display: none;
+  }
+}
+@media screen and (max-width: 700px) {
+  .bigger-text {
+    width: 250%;
+  }
+  .smaller-text {
+    width: 250%;
+  }
+  .buttons {
+    display: none;
   }
 }
 
@@ -894,8 +985,14 @@ footer a {
   .info-container {
     width: 80vw;
   }
+  .bigger-text {
+    width: 200%;
+  }
+  .smaller-text {
+    width: 200%;
+  }
   .info {
-    width: 100%;
+    width: 50%;
   }
   .main h1 {
     font-size: 5rem;
@@ -911,9 +1008,7 @@ footer a {
   .image-page {
     height: 50svh;
   }
-  .about-text {
-    width: 80vw;
-  }
+
   .third-page h2 {
     display: none;
   }
@@ -933,9 +1028,7 @@ footer a {
   .main-photo {
     display: none;
   }
-  .third-page {
-    height: 100svh;
-  }
+
   .about-container {
     gap: 0.5rem;
   }
@@ -945,23 +1038,27 @@ footer a {
   .fourth-page {
     padding-bottom: 10rem;
   }
-  .fourth-page h1 {
-    padding-top: 15rem;
-  }
-  .fourth-page h1:before {
-    top: 15rem;
-  }
+
   .category-button {
     left: 10rem;
+    z-index: 8001;
   }
   .submit {
-    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 2rem;
+    margin-bottom: 3rem;
   }
   .go-right {
     right: 78rem;
   }
   .go-left {
     left: 78rem;
+  }
+  .pagination {
+    bottom: -5rem;
   }
   nav {
     display: none;
@@ -994,18 +1091,17 @@ footer a {
   .text-container input {
     width: 80%;
   }
+  .fifth-page {
+    height: 100svh;
+    padding: 0px;
+  }
 }
 
 @media screen and (max-width: 350px) {
   .info h1 {
     font-size: 4.5rem;
   }
-  .about-text {
-    display: none;
-  }
-  .third-page {
-    height: 30svh;
-  }
+
   .category-button {
     left: 6rem;
   }
