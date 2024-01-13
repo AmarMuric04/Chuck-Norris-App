@@ -1,5 +1,5 @@
 document.querySelector(".tos").addEventListener("click", function () {
-  window.location.hash = "#terms-of-service";
+  window.location.hash = "#terms-and-conditions";
   checkHash();
 });
 document.querySelector(".privacy").addEventListener("click", function () {
@@ -25,16 +25,16 @@ document.querySelector(".faq").addEventListener("click", function () {
 });
 
 const checkHash = function () {
-  if (window.location.hash === "#terms-of-service") {
+  if (window.location.hash === "#terms-and-conditions") {
     document.querySelector(
       ".main-page"
     ).innerHTML = ` <h1>Terms and Conditions</h1>
 
-      <p>Last Updated: [Date]</p>
+      <p>Last Updated: 1/12/2024</p>
       <p>
-        Welcome to "Chuck Norris Facts Galore," the ultimate source of Chuck
-        Norris wisdom! These Terms and Conditions ("Terms") govern your use of
-        the Chuck Norris Facts Galore website (the "Site") and its related
+        Welcome to Chuck Norris Facts Galore the ultimate source of Chuck
+        Norris wisdom! These Terms and Conditions govern your use of
+        the Chuck Norris Facts Galore website and its related
         services. By accessing or using the Site, you agree to be bound by these
         Terms. If you do not agree with any of these terms, please refrain from
         using the Site.
@@ -122,16 +122,15 @@ const checkHash = function () {
       <h2>10. Governing Law</h2>
       <p>
         This Agreement is governed by and construed in accordance with the laws
-        of [Your Jurisdiction]. Any legal action arising out of or relating to
-        these terms shall be filed only in the applicable courts of [Your
-        Jurisdiction].
+        of Murga's laws. Any legal action arising out of or relating to
+        these terms shall be filed only in the applicable courts of Murga's laws.
       </p>
 
       <h2>Contact Information:</h2>
 
       <p>
         If you have any questions or concerns regarding these Terms and
-        Conditions, please contact us at [Your Contact Email].
+        Conditions, please contact us at chucknorris-contact@gmail.com.
       </p>
       <p>
         Thank you for being a part of Chuck Norris Facts Galore – where Chuck
@@ -144,8 +143,8 @@ const checkHash = function () {
       <p>Last Updated: 1/11/2024</p>
 
       <p>
-        Welcome to "Chuck Norris" the ultimate source of Chuck Norris wisdom!
-        This Privacy Policy outlines how "Chuck Norris" collects, uses, and
+        Welcome to Chuck Norris Facts Galore the ultimate source of Chuck Norris wisdom!
+        This Privacy Policy outlines how Chuck Norris Facts Galore collects, uses, and
         protects your personal information when you access or use our website
         (the "Site"). By using the Site, you agree to the terms outlined in this
         Privacy Policy.
@@ -223,7 +222,7 @@ const checkHash = function () {
       </p>
 
       <p>
-        Thank you for being a part of "Chuck Norris" – where Chuck Norris facts
+        Thank you for being a part of Chuck Norris Facts Galore – where Chuck Norris facts
         are legendary!
       </p>`;
   }
@@ -299,8 +298,7 @@ const checkHash = function () {
       <p>Q10: How can I contact Chuck Norris Facts Galore?</p>
 
       <strong>
-        A10: For general inquiries, you can reach out to us at [Your Contact
-        Email]. We're here to help and appreciate your feedback!
+        A10: For general inquiries, you can reach out to us at chucknorris-contact@gmail.com. We're here to help and appreciate your feedback!
       </strong>
       <p>
         Please note that these FAQs are for informational purposes, and the
@@ -332,4 +330,140 @@ const checkHash = function () {
 
       <p>Thank you for respecting our intellectual property rights.</p>`;
   }
+  if (window.location.hash === "#contact-us") {
+    document.querySelector(".main-page").innerHTML = `<h1>Contact Us</h1>
+      <h2>
+        Thank you for visiting Chuck Norris Facts Galore! If you have any
+        questions, feedback, or inquiries, feel free to reach out to us. We're
+        here to assist you!
+      </h2>
+
+      <h2>Contact Information</h2>
+      <p>Chuck Norris</p>
+      <p>Chuck Norris Facts Galore</p>
+      <p>8 Old York Court North Tonawanda, NY 14120</p>
+      <p>New York, California, 10001</p>
+      <p>chucknorris-contact@gmail.com</p>
+      <p>+205 443 2214 521</p>
+
+      <h2>General Inquiries</h2>
+
+      <p>
+        For general questions or information, please contact us at
+        chucknorris-contact@gmail.com. We'll do our best to respond promptly.
+      </p>
+      <h2>Technical Support</h2>
+      <p>
+        Experiencing technical issues with the site? Reach out to our technical
+        support team at chucknorris-help@gmail.com. Be sure to provide details
+        about the problem, including the device and browser you're using.
+      </p>
+
+      <h2>Media and Press</h2>
+      <p>
+        For media inquiries or press-related matters, please contact our media
+        relations team at chucknorris-media@gmail.com.
+      </p>
+      <h2>Submitting Chuck Norris Facts</h2>
+      <p>
+        While we currently don't have a submission feature on the website, we
+        appreciate your Chuck Norris facts! Feel free to share them with us at
+        chucknorris-submitfact@gmail.com, and your fact might be featured.
+      </p>
+
+      <h2>Visit Us</h2>
+      <p>
+        If you prefer in-person communication, you're always welcome to visit
+        our headquarters at the address provided above during our business
+        hours.
+      </p>
+
+      <h2>Feedback Form</h2>
+
+      <p>
+        We value your feedback! If you have a specific inquiry or request, you
+        can also use the form below to get in touch with us:
+      </p>
+
+      <div>
+        <div>
+          <input type="text" placeholder="First name" />
+          <input type="text" placeholder="Last name" />
+        </div>
+        <textarea
+          name=""
+          id=""
+          placeholder="Write some feedback..."
+          cols="30"
+          rows="10"
+        ></textarea>
+      </div>
+      <button>Submit</button>`;
+  }
+  if (window.location.hash === "#about-us") {
+    document.querySelector(".main-page").innerHTML = `
+       <h1>About Us</h1>
+
+      <p>
+        Welcome to "Chuck Norris", the ultimate destination for Chuck Norris
+        enthusiasts and humor seekers! Get ready to embark on a journey through
+        a world of legendary Chuck Norris facts that will leave you entertained
+        and amazed.
+      </p>
+      <h2>Our Story</h2>
+      <p>
+        At Chuck Norris, our mission is simple – to celebrate the legendary
+        Chuck Norris through a collection of humorous and exaggerated facts that
+        showcase his mythical prowess. Founded in 2024, our website has become a
+        go-to source for fans looking to enjoy a good laugh and indulge in the
+        whimsical side of Chuck Norris.
+      </p>
+      <h2>Our Mission</h2>
+      <p>
+        Our primary goal is to spread joy and laughter through the timeless and
+        fictional tales of Chuck Norris's extraordinary abilities. We believe in
+        the power of humor to unite people and provide a lighthearted escape
+        from the challenges of everyday life.
+      </p>
+
+      <h2>What Sets Us Apart</h2>
+      <p>
+        <strong> Extensive Collection: </strong> With over 20,000 Chuck Norris
+        facts, we offer one of the largest and most diverse collections
+        available online. Community Engagement: We love hearing from our
+        community! Whether it's sharing your favorite Chuck Norris fact or
+        reaching out with questions, we value every interaction.
+      </p>
+
+      <p>
+        <strong>Quality Entertainment:</strong>
+        We curate content with care, ensuring that each Chuck Norris fact on our
+        site is designed to bring a smile to your face. Meet the Team
+      </p>
+
+      <p>
+        Behind Chuck Norris Facts Galore is a passionate team dedicated to
+        curating, updating, and maintaining this hub of Chuck Norris humor. Our
+        diverse team brings a range of talents and a shared commitment to
+        delivering top-notch entertainment.
+      </p>
+
+      <strong> Murga - Founder and Chief Chuck Norris Enthusiast </strong>
+
+      <h2>Contact Us</h2>
+      <p>
+        We love connecting with our community! If you have questions, feedback,
+        or just want to say hello, feel free to reach out to us at
+        chucknorris-contact@gmail.com
+      </p>
+
+      <p>Thank You for Being a Part of Chuck Norris facts!</p>
+      <p>
+        We appreciate your support and enthusiasm as we continue to spread
+        laughter and celebrate the legend that is Chuck Norris.
+      </p>`;
+  }
 };
+
+checkHash();
+window.addEventListener("hashchange", checkHash);

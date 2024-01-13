@@ -23,10 +23,21 @@ body {
   width: 20%;
   color: white;
 }
+.title-container {
+  margin-top: 5rem;
+  margin-bottom: -5rem;
+}
 .sidebar h1 {
   font-family: "Anton";
   font-size: 3rem;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+}
+.sidebar h2 {
+  font-family: "Anton";
+  color: orange;
   display: flex;
   justify-content: center;
 }
@@ -83,4 +94,40 @@ body {
 .main-page span {
   font-weight: bold;
   font-size: 1.1rem;
+}
+.main-page div {
+  width: 80%;
+  align-self: center;
+}
+.main-page div div {
+  width: 100%;
+  display: flex;
+}
+.main-page input {
+  width: 50%;
+  padding: 0.5rem;
+}
+.main-page textarea {
+  max-width: 27.7rem;
+  min-width: 27.7rem;
+  max-height: 15rem;
+  min-height: 15rem;
+  padding: 0.5rem;
+}
+.main-page textarea:focus,
+.main-page input:focus {
+  outline: none;
+}
+.main-page button {
+  padding: 1rem;
+  width: 40%;
+  cursor: pointer;
+  background-color: orange;
+  border: 1px solid black;
+  align-self: center;
+  transition: all 0.2s;
+}
+.main-page button:hover {
+  background-color: black;
+  color: orange;
 }

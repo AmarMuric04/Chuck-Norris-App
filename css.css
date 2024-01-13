@@ -392,6 +392,11 @@ nav {
   justify-content: center;
   align-items: center;
   transition: all 0.2s;
+  color: black;
+}
+a {
+  color: inherit;
+  text-decoration: none;
 }
 .learn-more:focus {
   outline: none;
@@ -830,6 +835,17 @@ footer {
   flex-direction: column-reverse;
   padding: 2rem 0rem;
   justify-content: space-between;
+}
+.information-container {
+  display: flex;
+  gap: 2rem;
+}
+.information-container a {
+  color: black;
+  transform: all 0.2s;
+}
+.information-container a:hover {
+  text-decoration: underline;
 }
 
 footer i {
