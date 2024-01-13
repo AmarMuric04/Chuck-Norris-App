@@ -371,7 +371,7 @@ nav {
 
 .about-text {
   font-size: 1.5rem;
-  width: 40%;
+  width: 30%;
   letter-spacing: 0.1em;
   text-align: center;
   min-height: 10rem;
@@ -858,6 +858,11 @@ footer a {
   color: white;
   text-decoration: none;
 }
+@media screen and (max-width: 1650px) {
+  .about-text {
+    width: 40%;
+  }
+}
 @media screen and (max-width: 1536px) {
   .main {
     height: 100svh;
@@ -868,6 +873,9 @@ footer a {
 }
 
 @media screen and (max-width: 1366px) {
+  .second-page::after {
+    display: none;
+  }
   .main {
     height: 100svh;
   }
@@ -906,6 +914,9 @@ footer a {
 @media screen and (max-width: 1080px) {
   .main-photo {
     display: none;
+  }
+  .bigger-text {
+    width: 150%;
   }
   .smaller-text {
     width: 153%;
@@ -956,13 +967,21 @@ footer a {
   .category-button {
     left: 35%;
   }
+  .go-right {
+    right: 95rem;
+  }
+  .go-left {
+    left: 95rem;
+  }
+  .card p {
+    font-size: 2rem;
+  }
 }
-@media screen and (max-width: 700px) {
+
+@media screen and (max-width: 750px) {
   nav {
     display: none;
   }
-}
-@media screen and (max-width: 700px) {
   .bigger-text {
     width: 250%;
   }
@@ -972,11 +991,34 @@ footer a {
   .buttons {
     display: none;
   }
+  .card-container {
+    height: auto;
+    margin-top: 1rem;
+  }
+  .card {
+    width: 80%;
+  }
+  .fourth-page {
+    height: auto;
+  }
+  .pagination {
+    bottom: -3rem;
+  }
+  .go-right {
+    right: 75rem;
+  }
+  .go-left {
+    left: 75rem;
+  }
 }
 
 @media screen and (max-width: 414px) {
   .main {
     height: 100svh;
+  }
+  .information {
+    width: 70vw;
+    text-align: center;
   }
   .info-container::after {
     display: none;
